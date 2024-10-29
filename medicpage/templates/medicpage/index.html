@@ -1,0 +1,9 @@
+{% extends "medicpage/base.html" %}
+
+{% block container %}
+<main>
+        <p>Cuidar da saúde é fundamental para o bem-estar físico e mental. Isso envolve não apenas uma alimentação equilibrada e a prática regular de exercícios, mas também a atenção ao autocuidado e à saúde emocional. O Índice de Massa Corporal (IMC) é uma ferramenta que ajuda a avaliar se o peso está adequado em relação à altura, sendo um indicativo importante, mas não o único, da saúde de uma pessoa. Manter hábitos saudáveis, como dormir bem, hidratar-se e gerenciar o estresse, contribui significativamente para um estilo de vida equilibrado e saudável. Para descobrir seu IMC clique no botão abaixo:</p>
+
+        <a href="{% url "Calculo" %}">CALCULE SEU IMC</a>
+</main>
+{% endblock container %}

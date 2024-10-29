@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body class="container">
+    <header>
+        <div id="titulo-page">
+            <h1>Medic Page</h1>
+        </div>
+    </header>
+
+    {% block container %}
+    {% endblock container %}
+
+    <footer>
+        <p>Clique no link a seguir para mais informações: <a href="#">mais informações</a></p>
+        
+    </footer>
+    
+</body>
+</html>
