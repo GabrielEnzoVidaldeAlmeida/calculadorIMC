@@ -1,9 +1,52 @@
 {% extends "medicpage/base.html" %}
-
-
 {% block container %}
 
 <main>
-    <p>faça seus calculos de imc aqui</p>
+    <div class="area">
+        <div class="container-imc">
+            <h2>Calculador de IMC</h2>
+            <div class="area-input">
+                <h3>Altura (cm)</h3>
+                <input id="height" type="number">
+            </div>
+            <div class="area-input">
+                <h3>Peso (kg)</h3>
+                <input id="weight" type="number">
+            </div>
+            <button onclick="calculate()">Calcular</button>
+            <textarea name="" id="text-area" rows="8"></textarea>
+        </div>
+    </div>
+
+    <script>
+    function calculate(){
+        var height = (document.getElementById("height").value)/100;
+        var weight = document.getElementById("weight").value;
+
+        var imc = weight / height ** 2;
+        console.log(imc);
+
+        var text = ""
+        if (imc < 18.5){
+            text = "Abaixo do peso"
+        } else if (imc < 24.9){
+            text = "Peso normal"
+        } else if (imc < 29.9){
+            text = "Sobrepeso"
+        } else if (imc < 34.9){
+            text = "Obesidade grau I"
+        } else if (imc < 39.9){
+            text = "Obseidade grau II"
+        } else if (imc < 49.9){
+            text = "Obsedidade grau III"
+        } else if (imc < 59.9){
+            wtext = "Obsedidade grau IV"
+        } else if (imc > 60){
+            text = "Obseidade grau V"
+        }
+        document.getElementById("text-area").innerText = text
+    }
+    </script>
+
 </main>
 {% endblock container %}

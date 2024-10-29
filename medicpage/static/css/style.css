@@ -37,11 +37,6 @@ main p{
     margin-top: 80px;
     text-align:justify;
 }
-main button:hover{
-    border: 2px solid antiquewhite;
-    background-color:yellowgreen;
-    transition: 250ms linear;
-}
 main a{
     display:flex;
     text-decoration: none;
