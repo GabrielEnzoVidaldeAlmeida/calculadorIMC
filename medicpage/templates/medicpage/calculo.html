@@ -4,9 +4,9 @@
 <main>
     <div class="area">
         <div class="container-imc">
-            <h2>Calculador de IMC</h2>
+            <h2>Calculadora de IMC</h2>
             <div class="area-input">
-                <h3>Altura (cm)</h3>
+                <h3>Altura (m)</h3>
                 <input id="height" type="number">
             </div>
             <div class="area-input">
@@ -14,13 +14,13 @@
                 <input id="weight" type="number">
             </div>
             <button onclick="calculate()">Calcular</button>
-            <textarea name="" id="text-area" rows="8"></textarea>
+            <textarea name="" id="text-area" rows="4"></textarea>
         </div>
     </div>
 
     <script>
     function calculate(){
-        var height = (document.getElementById("height").value)/100;
+        var height = document.getElementById("height").value;
         var weight = document.getElementById("weight").value;
 
         var imc = weight / height ** 2;
